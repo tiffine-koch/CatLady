@@ -4,7 +4,9 @@ var mongoose = require('mongoose');
 
 var ladySchema = mongoose.Schema({
   name: String,
-  phone: String,
+  image: String,
+  bio: String,
+  number: Number,
   cats: [{type: mongoose.Schema.Types.ObjectId, ref: 'Cat'}],
   createdAt: { type: Date, default: Date.now }
 });

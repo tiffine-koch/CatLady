@@ -1,0 +1,64 @@
+<div class="container">
+    <form class="col s12" name='destForm' autocomplete='off'>
+      <div class="row">
+        <div id="formBorder" class="col s6">
+            <img id="catFormPic" src="img/socks.jpg" alt="">
+        </div>
+        <div class="col s6" id="formHeader">
+          <h4>Add a Cat</h4>
+        </div>
+      </div>
+    <div class="row">
+      <div class="input-field col s5">
+        <i class="material-icons prefix">perm_identity</i>
+        <input id="icon_prefix" type="text" name="name" ng-model='cat.name' name='name' required minlength='1'>
+        <label for="icon_prefix">Cat Name</label>
+      </div>
+      <div class="input-field col s5">
+        <i class="material-icons prefix">picture_in_picture</i>
+        <input type="text" class="validate" ng-model="cat.image" required>
+        <label for="">Image URL</label>
+      </div>
+    <div class="col s2">
+      <a type='button' class="btn-floating btn-large red"><i class="fa fa-heart-o" ng-click="submitCatForm(cat)" ui-sref='cats'></i></a>
+    </div>
+  </div>
+
+
+   <div class="row">
+     <div id="formBorder" class="col s6">
+         <img id="formPic" src="img/logo.png" alt="">
+     </div>
+     <div class="col s6" id="formHeader">
+       <h4>Add a Lady</h4>
+     </div>
+   </div>
+    <div class="row">
+      <div class="input-field col s4">
+        <i class="material-icons prefix">perm_identity</i>
+        <input id="icon_prefix" type="text" name="name" ng-model='lady.name' required minlength='1'>
+        <label for="icon_prefix">Lady Name</label>
+      </div>
+      <div class="input-field col s4">
+        <i class="material-icons prefix">picture_in_picture</i>
+        <input type="text" class="validate" ng-model="lady.image" required>
+        <label for="">Image URL</label>
+      </div>
+      <div class="input-field col s4">
+        <i class="material-icons prefix">shopping_basket</i>
+        <input type="number" name='total' ng-model='lady.number' required>
+        <label for=""># of cats already owned...</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s10">
+        <i class="material-icons prefix">edit</i>
+        <input id="icon_prefix" type="text" name="bio" ng-model='lady.bio' required minlength='1'>
+        <label for="icon_prefix">Lady Bio</label>
+      </div>
+       <div class="col s2">
+         <a type='button' class="btn-floating btn-large red"><i class="fa fa-female" ng-click="submitLadyForm(lady)" ui-sref='ladies'></i></a>
+       </div>
+    </div>
+   </form>
+ </div>

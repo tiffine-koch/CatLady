@@ -1,0 +1,35 @@
+<div class="jumbotron" id="ladyJumbo"></div>
+<h1 id="ladyHeader">Ladies</h1>
+<div class="row">
+    <!-- <div class="s10 offset-s1 col">
+        <h2>Cat Ladies</h2>
+        <img src="/img/couch.jpg" alt="">
+    </div> -->
+    <div class="s10 offset-s1 col">
+        <div class="row">
+    <div class="col m4 animated fadeInUp"
+        style="-webkit-animation-duration:{{$index * 300}}ms"
+        ng-repeat="lady in ladies">
+        <div class="card pink lighten-2">
+            <div class="card-content center-align">
+                <div class="card-title truncate white-text text-darken-4">{{lady.name}}</div>
+                <img class="circle" ng-src="{{lady.image}}">
+                <hr>
+                <p class="white-text text-darken-4">{{lady.bio}}</p>
+                <div class="card-action center-align truncate">
+                  <a href="#" class="white-text text-darken-4">Owns {{lady.number}} cats</a>
+                </div>
+                <div class="row">
+                    <div class="col m2 hide-on-small-only">&nbsp;</div>
+                    <div class="col m2 s6 center-align"><a href=""><i class="white-text small material-icons">shopping_cart</i></a></div>
+                    <div class="col m2 s6 center-align"><a href=""><i class="white-text small material-icons">edit</i></a></div>
+                    <div class="col m2 s6 center-align"><a href=""><i class="white-text small material-icons">zoom_in</i></a></div>
+                    <div class="col m2 s6 center-align"><a href=""><i class="white-text small material-icons" ng-click="deleteLady($index, lady)">not_interested</i></a></div>
+                    <div class="col m2 .hide-on-small-only">&nbsp;</div>
+                </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>

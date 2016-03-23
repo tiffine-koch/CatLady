@@ -6,3 +6,55 @@ body {
 a {
   color: #00B7FF;
 }
+
+#catFormPic {
+  width: 180px;
+	height: 180px;
+	border-radius: 150px;
+	-webkit-border-radius: 150px;
+	-moz-border-radius: 150px;
+}
+
+#ladyJumbo {
+  font-family: 'Rock Salt', cursive;
+  background: url(/img/cuba.jpg)
+    top center
+    no-repeat
+    fixed;
+  height: 75vh;
+  width: 100%;
+  color: white;
+}
+#catJumbo {
+  font-family: 'Rock Salt', cursive;
+  background: url(/img/couch.jpg)
+    top center
+    no-repeat
+    fixed;
+  height: 75vh;
+  width: 100%;
+  color: white;
+}
+#singleJumbo {
+  font-family: 'Rock Salt', cursive;
+  background: url(/img/starter.jpg)
+    top center
+    no-repeat
+    fixed;
+  height: 75vh;
+  width: 100%;
+  color: white;
+}
+
+.circle {
+	width: 200px;
+	height: 200px;
+  border-radius: 50%;
+	/*border-radius: 150px;*/
+	/*-webkit-border-radius: 150px;*/
+	/*-moz-border-radius: 150px;*/
+}
+
+.card {
+  border-radius: 10px;
+}

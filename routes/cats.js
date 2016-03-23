@@ -45,4 +45,17 @@ router.put('/:catId/addLady/:ladyId', function(req, res) {
   })
 })
 
+router.delete('/:id', function(req, res) {
+  Cat.findById(req.params.id, function(err, cat) {
+    cat.remove(function(err) {
+      if(err) {
+        res.status(400).send(err);
+        return;
+      }
+      console.log('successly deleted');
+      res.send();
+    })
+  })
+})
+
 module.exports = router;
