@@ -17,7 +17,8 @@
   <li class="collection-item avatar" ng-repeat="cat in cats | orderBy: 'name' | filter: filterText track by $index">
     <img src="{{cat.image}}" alt="" class="circle">
     <span class="title">{{cat.name}}</span>
-    <button type='button' class="secondary-content btn-floating pink accent-1"><i class="fa fa-heart-o" ng-click="addCat(cat)"></i></button>
+    <button type='button' class="secondary-content btn-floating pink accent-1"><i class="white-text small material-icons" ng-click="addCat(cat)" ui-sref="form">mode_edit</i></button>
+    <!-- <button type='button' class="secondary-content btn-floating pink accent-1"><i class="fa fa-heart-o" ng-click="addCat(cat)" ui-sref="form"></i></button> -->
     <!-- <button ng-click="deleteCat($index, cat)" type="button" class="btn-floating red right-align"><i class="small material-icons right-align">not_interested</i>Delete Me</button> -->
   </li>
 </ul>
