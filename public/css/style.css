@@ -21,7 +21,7 @@ a {
     top center
     no-repeat
     fixed;
-  height: 75vh;
+  height: 40vh;
   width: 100%;
   color: white;
 }
@@ -31,17 +31,17 @@ a {
     top center
     no-repeat
     fixed;
-  height: 75vh;
+  height: 40vh;
   width: 100%;
   color: white;
 }
 #singleJumbo {
   font-family: 'Rock Salt', cursive;
-  background: url(/img/starter.jpg)
+  background: url(/img/gattara.gif)
     top center
     no-repeat
     fixed;
-  height: 75vh;
+  height: 40vh;
   width: 100%;
   color: white;
 }
@@ -50,9 +50,6 @@ a {
 	width: 200px;
 	height: 200px;
   border-radius: 50%;
-	/*border-radius: 150px;*/
-	/*-webkit-border-radius: 150px;*/
-	/*-moz-border-radius: 150px;*/
 }
 
 .card {
@@ -66,4 +63,14 @@ h4 {
 
 .navbar {
   background-color: white;
+}
+
+.catsHeader {
+  margin-top: 200px;
+  margin-right: 30px;
+  margin-left: 30px;
+}
+
+.catsImage {
+  border-radius: 50%;
 }

@@ -1,12 +1,20 @@
-<div class="jumbotron" id="catJumbo">
+<div class="row">
+  <div class="col 2">
+    <h4 class="catsHeader">Cats.</h4>
+  </div>
+  <div class="col 6">
+    <img class="catsImage" src="/img/couch2.jpg" alt="">
+  </div>
+  <div class="col 4">
+    <h4 class="catsHeader">Lots of cats...   </h4>
+  </div>
 </div>
-<h1 id="catHeader">Cats</h1>
 <div class="input-field col s12 m12">
   <input type="text" class="filterLine" ng-model="filterText">
   <label for="">Search</label>
 </div>
 <ul class="collection" id="catList">
-  <li class="collection-item avatar" ng-repeat='cat in cats | filter: filterText track by $index'>
+  <li class="collection-item avatar" ng-repeat="cat in cats | orderBy: 'name' | filter: filterText track by $index">
     <img src="{{cat.image}}" alt="" class="circle">
     <span class="title">{{cat.name}}</span>
     <button type='button' class="secondary-content btn-floating pink accent-1"><i class="fa fa-heart-o" ng-click="addCat(cat)"></i></button>

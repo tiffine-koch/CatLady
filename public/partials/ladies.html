@@ -1,5 +1,14 @@
-<div class="jumbotron" id="ladyJumbo"></div>
-  <h1 id="ladyHeader">Ladies</h1>
+<div class="row">
+  <div class="col 4">
+    <h4 class="catsHeader">#ladies</h4>
+  </div>
+  <div class="col 8">
+    <img class="catsImage" src="/img/cuba.jpg" alt="">
+  </div>
+  <!-- <div class="col 4">
+    <h4 class="catsHeader">Lots of cats...   </h4>
+  </div> -->
+</div>
 <div class="row">
   <div class="row">
     <div class="input-field col s12 m12">
@@ -9,7 +18,7 @@
   </div>
   <div class="s10 offset-s1 col">
     <div class="row">
-    <div class="col m4 animated fadeInUp" style="-webkit-animation-duration:{{$index * 300}}ms" ng-repeat="lady in ladies | filter: filterText track by $index">
+    <div class="col m4 animated fadeInUp" style="-webkit-animation-duration:{{$index * 300}}ms" ng-repeat="lady in ladies | orderBy: 'name' | filter: filterText track by $index">
         <div class="card pink lighten-2">
             <div class="card-content center-align">
                 <div class="card-title truncate white-text text-darken-4">{{lady.name}}</div>
