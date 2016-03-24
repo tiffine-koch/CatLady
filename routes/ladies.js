@@ -30,6 +30,21 @@ router.post('/', function(req, res) {
   });
 });
 
+router.put('/:ladyId/addCat/:catId', function(req, res) {
+  Lady.findById(req.params.ladyId, function(err, lady) {
+    if(err || !lady) return res.status(400).send(err || "Lady not found");
+    Cat.findById(req.params.catId, function(err, cat) {
+      if(err || !cat) return res.status(400).send(err || "Cat not found");
+      lady.cats.push(req.params.catId);
+      console.log('success');
+
+      lady.save(function(err, savedLady) {
+        res.status(err ? 400 : 200).send(err || savedLady);
+      });
+    })
+  })
+})
+
 router.delete('/:id', function(req, res) {
   Lady.findById(req.params.id, function(err, lady) {
     lady.remove(function(err) {

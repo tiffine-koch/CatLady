@@ -20,15 +20,15 @@ app.service('CatService', function($http) {
     return $http.put(`/cats/${catId}`, updateObj);
   };
 
-  this.toggleCheckin = function(catId) {
+  this.toggleAdoption = function(catId) {
     return $http.put(`/cats/${cat._id}/checkin`);
   };
 
-  this.addClient = function(catId, ladyId) {
+  this.addCat = function(catId, ladyId) {
     return $http.put(`/cats/${cat._id}/addLady/${lady._id}`);
   }
   //multiple clients
-  this.addClients = function(catId, ladyId) {
+  this.addCats = function(catId, ladyId) {
     return $http.put(`/cats/${cat._id}/addLadies`, {ladyIds: ladyIds});
   }
 

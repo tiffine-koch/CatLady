@@ -12,8 +12,8 @@ app.service('LadyService', function($http) {
     return $http.get('/ladies/upcoming');
   };
 
-  this.getOne= function(ladyId) {
-    return $http.get(`/ladies/${lady_id}`);
+  this.getOne= function(id) {
+    return $http.get(`/ladies/${id}`);
   };
 
   this.create = function(lady) {
@@ -24,15 +24,15 @@ app.service('LadyService', function($http) {
     return $http.put(`/ladies/${catId}`, updateObj);
   };
 
-  this.toggleCheckin = function(ladyId) {
+  this.toggleAdoption = function(ladyId) {
     return $http.put(`/ladies/${cat._id}/checkin`);
   };
 
-  this.addClient = function(ladyId, catId) {
-    return $http.put(`/ladies/${lady._id}/addCat/${cat._id}`);
+  this.addCat = function(ladyId, catId) {
+    return $http.put(`/ladies/${ladyId}/addCat/${catId}`);
   }
   //multiple clients
-  this.addClients = function(ladyId, catId) {
+  this.addCats = function(ladyId, catId) {
     return $http.put(`/ladies/${lady._id}/addCats`, {catIds: catIds});
   }
 
