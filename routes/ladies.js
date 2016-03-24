@@ -14,6 +14,15 @@ router.get('/', function(req, res, next) {
   });
 });
 
+router.get('/:id', function(req, res) {
+  Lady.findById(req.params.id)
+  .populate('cats')
+  .exec(function(err, lady) {
+    if(err || !lady) return res.status(400).send(err || "Lady not found");
+    res.send(lady);
+  })
+})
+
 router.post('/', function(req, res) {
   Lady.create(req.body, function(err, lady) {
     res.status(err ? 400 : 200).send(err || lady);

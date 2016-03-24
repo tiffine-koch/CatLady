@@ -1,27 +1,15 @@
 <div class="jumbotron" id="catJumbo">
 </div>
 <h1 id="catHeader">Cats</h1>
-
+<div class="input-field col s12 m12">
+  <input type="text" class="filterLine" ng-model="filterText">
+  <label for="">Search</label>
+</div>
 <ul class="collection" id="catList">
   <li class="collection-item avatar" ng-repeat='cat in cats | filter: filterText track by $index'>
     <img src="{{cat.image}}" alt="" class="circle">
     <span class="title">{{cat.name}}</span>
-    <button type='button' class="secondary-content btn-floating yellow"><i class="fa fa-heart-o" ng-click="addCat(cat)"></i></button>
+    <button type='button' class="secondary-content btn-floating pink accent-1"><i class="fa fa-heart-o" ng-click="addCat(cat)"></i></button>
     <!-- <button ng-click="deleteCat($index, cat)" type="button" class="btn-floating red right-align"><i class="small material-icons right-align">not_interested</i>Delete Me</button> -->
-  </li>
-  <li class="collection-item avatar">
-    <img src="img/socks.jpg" alt="" class="circle">
-    <span class="title">Patti</span>
-    <button type='button' class="secondary-content btn-floating yellow"><i class="fa fa-heart-o" ng-click="submitCatForm(cat)"></i></button>
-  </li>
-  <li class="collection-item avatar">
-    <img src="img/knitting.jpg" alt="" class="circle">
-    <span class="title">Rocky</span>
-    <button type='button' class="secondary-content btn-floating yellow"><i class="fa fa-heart-o" ng-click="submitCatForm(cat)"></i></button>
-  </li>
-  <li class="collection-item avatar">
-    <img src="img/socks.jpg" alt="" class="circle">
-    <span class="title">Fluffy</span>
-    <button type='button' class="secondary-content btn-floating yellow"><i class="fa fa-heart-o" ng-click="submitCatForm(cat)"></i></button>
   </li>
 </ul>

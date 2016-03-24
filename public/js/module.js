@@ -7,6 +7,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
     .state('home', { url: '/', templateUrl: '/partials/home.html', controller: 'homeCtrl' })
     .state('form', { url: '/form', templateUrl: '/partials/form.html', controller: 'formCtrl' })
     .state('ladies', { url: '/ladies', templateUrl: '/partials/ladies.html', controller: 'ladyCtrl' })
+    .state('single', { url: '/single', templateUrl: '/partials/single.html', controller: 'singleCtrl' })
     .state('cats', { url: '/cats', templateUrl: '/partials/cats.html', controller: 'catCtrl' })
 
   $urlRouterProvider.otherwise('/');

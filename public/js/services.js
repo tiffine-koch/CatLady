@@ -42,6 +42,10 @@ app.service('LadyService', function($http) {
   this.getUpcoming = function() {
     return $http.get('/ladies/upcoming');
   };
+  
+  this.getOne= function(ladyId) {
+    return $http.get(`/ladies/${lady_id}`);
+  };
 
   this.create = function(lady) {
     return $http.post('/ladies', lady);

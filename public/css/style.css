@@ -58,3 +58,12 @@ a {
 .card {
   border-radius: 10px;
 }
+
+h4 {
+  color: #ff4081;
+  /*font-style: italic;*/
+}
+
+.navbar {
+  background-color: white;
+}

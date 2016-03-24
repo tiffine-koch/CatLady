@@ -1,15 +1,15 @@
 <div class="jumbotron" id="ladyJumbo"></div>
-<h1 id="ladyHeader">Ladies</h1>
+  <h1 id="ladyHeader">Ladies</h1>
 <div class="row">
-    <!-- <div class="s10 offset-s1 col">
-        <h2>Cat Ladies</h2>
-        <img src="/img/couch.jpg" alt="">
-    </div> -->
-    <div class="s10 offset-s1 col">
-        <div class="row">
-    <div class="col m4 animated fadeInUp"
-        style="-webkit-animation-duration:{{$index * 300}}ms"
-        ng-repeat="lady in ladies">
+  <div class="row">
+    <div class="input-field col s12 m12">
+      <input type="text" class="filterLine" ng-model="filterText">
+      <label for="">Search</label>
+    </div>
+  </div>
+  <div class="s10 offset-s1 col">
+    <div class="row">
+    <div class="col m4 animated fadeInUp" style="-webkit-animation-duration:{{$index * 300}}ms" ng-repeat="lady in ladies | filter: filterText track by $index">
         <div class="card pink lighten-2">
             <div class="card-content center-align">
                 <div class="card-title truncate white-text text-darken-4">{{lady.name}}</div>
@@ -21,9 +21,9 @@
                 </div>
                 <div class="row">
                     <div class="col m2 hide-on-small-only">&nbsp;</div>
-                    <div class="col m2 s6 center-align"><a href=""><i class="white-text small material-icons">shopping_cart</i></a></div>
-                    <div class="col m2 s6 center-align"><a href=""><i class="white-text small material-icons">edit</i></a></div>
-                    <div class="col m2 s6 center-align"><a href=""><i class="white-text small material-icons">zoom_in</i></a></div>
+                    <!-- <div class="col m2 s6 center-align"><a href=""><i class="white-text small material-icons">shopping_cart</i></a></div> -->
+                    <div class="col m2 s6 center-align"><a href=""><i class="white-text small material-icons" ng-click="editLady($index, lady)">edit</i></a></div>
+                    <div class="col m2 s6 center-align"><a href=""><i class="white-text small material-icons" ng-click="singleLady(lady)" ui-sref="single">zoom_in</i></a></div>
                     <div class="col m2 s6 center-align"><a href=""><i class="white-text small material-icons" ng-click="deleteLady($index, lady)">not_interested</i></a></div>
                     <div class="col m2 .hide-on-small-only">&nbsp;</div>
                 </div>
