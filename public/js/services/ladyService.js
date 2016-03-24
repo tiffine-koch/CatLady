@@ -31,9 +31,7 @@ app.service('LadyService', function($http) {
   this.addCat = function(ladyId, catId) {
     return $http.put(`/ladies/${ladyId}/addCat/${catId}`);
   }
-  //multiple clients
   this.addCats = function(ladyId, catId) {
     return $http.put(`/ladies/${lady._id}/addCats`, {catIds: catIds});
   }
-
 });

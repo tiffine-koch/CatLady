@@ -3,8 +3,6 @@
 var app = angular.module('catApp');
 
 app.controller('catCtrl', function($scope, $http, CatService, LadyService) {
-  console.log('cat');
-
   CatService.getAll()
   .then(function(res) {
     $scope.cats = res.data;
