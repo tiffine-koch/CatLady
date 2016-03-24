@@ -24,7 +24,7 @@
         <li class="collection-item avatar" ng-repeat='cat in cats | filter: filterText track by $index'>
           <img src="{{cat.image}}" alt="" class="circle">
           <span class="title">{{cat.name}}</span>
-          <button type='button' class="secondary-content btn-floating pink accent-1"><i class="fa fa-heart-o" ng-click="addCat(lady, cat)"></i></button>
+          <button type='button' class="secondary-content btn-floating pink accent-1"><i class="fa fa-heart-o" ng-click="addCat(lady, cat)" ui-sref='ladies'></i></button>
         </li>
       </ul>
     </div>

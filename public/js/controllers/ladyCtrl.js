@@ -47,7 +47,8 @@ app.controller('ladyCtrl', function($rootScope, $scope, $http, CatService, LadyS
 
     LadyService.addCat(ladyId, catId)
     .then(function(res) {
-
+      swal("Congrats on your new cat!");
+      debugger;
       console.log('res:', res);
     }, function(err) {
       console.log('err:', err);
