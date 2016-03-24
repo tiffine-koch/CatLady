@@ -36,7 +36,7 @@ router.put('/:ladyId/addCat/:catId', function(req, res) {
     Cat.findById(req.params.catId, function(err, cat) {
       if(err || !cat) return res.status(400).send(err || "Cat not found");
       lady.cats.push(req.params.catId);
-      console.log('success');
+      // console.log('success');
 
       lady.save(function(err, savedLady) {
         res.status(err ? 400 : 200).send(err || savedLady);

@@ -45,7 +45,7 @@ app.controller('ladyCtrl', function($rootScope, $scope, $http, CatService, LadyS
     console.log('lady', ladyId);
 
 
-    LadyService.addCat()
+    LadyService.addCat(ladyId, catId)
     .then(function(res) {
 
       console.log('res:', res);
